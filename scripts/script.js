@@ -2,15 +2,13 @@ class FetchData {
   getResource = async url => {
     const res = await fetch(url);
     if (!res.ok) { 
-      console.log(res.status);
       throw new Error("Error:" + res.status); 
     }
     
-    console.log(res.json )
     return res.json();
   }
 
-  getPost = async () => await this.getResource('db/database.json');
+  getPost = async () => await this.getResource('db/dataBase.json');
 }
 
 class Twitter {
